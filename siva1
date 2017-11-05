@@ -1,0 +1,79 @@
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop
+$ git mkdir gitpractice
+git: 'mkdir' is not a git command. See 'git --help'.
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop
+$ mkdir gitpractice
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop
+$ cd gitpractice/
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice
+$ git clone https://github.com/kallapusiva/devops.git
+Cloning into 'devops'...
+warning: You appear to have cloned an empty repository.
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice
+$ cd devops/
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$ git add src build.xml
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$ git commit -m "creating build"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'user@DESKTOP-MVS9PB2.(none)')
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$ git config --global user.email "kallapusiva123@gmail.com"
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$ git config --global user.name "kallapusiva"
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$ git push origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/kallapusiva/devops.git'
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   build.xml
+        new file:   src/EnhancedFor.java
+
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$ git commit -m "creating build"
+[master (root-commit) 5ab5b94] creating build
+ 2 files changed, 88 insertions(+)
+ create mode 100644 build.xml
+ create mode 100644 src/EnhancedFor.java
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.04 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/kallapusiva/devops.git
+ * [new branch]      master -> master
+
+user@DESKTOP-MVS9PB2 MINGW64 ~/Desktop/gitpractice/devops (master)
+$
